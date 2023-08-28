@@ -1,4 +1,4 @@
-# adonis-package-skeleton
+# AdonisJs Menus
 > A skeleton repository for creating AdonisJS packages
 
 [![npm-image]][npm-url] [![license-image]][license-url] [![typescript-image]][typescript-url]

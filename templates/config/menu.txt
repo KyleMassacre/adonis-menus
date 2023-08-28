@@ -1,0 +1,7 @@
+import { MenuConfig } from '@ioc:Addonis/Addons/Menu'
+
+const skeletonConfig: MenuConfig = {
+  //
+}
+
+export default skeletonConfig

@@ -1,14 +1,14 @@
 {
-  "name": "skeleton",
-  "version": "0.0.0",
-  "description": "A skeleton repository for creating AdonisJS packages",
+  "name": "adonis5-menus",
+  "version": "1.0.0",
+  "description": "A menu manager for AdonisJs",
   "main": "build/providers/SkeletonProvider.js",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
     "clean": "del-cli build",
     "copyfiles": "copyfiles \"templates/**/*.txt\" \"instructions.md\" build",
-    "compile": "npm run lint && npm run clean && tsc && npm run copyfiles",
+    "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext=.ts",
@@ -16,21 +16,22 @@
     "commit": "git-cz",
     "release": "np --message=\"chore(release): %s\"",
     "version": "npm run build",
-    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json {owner}/{skeleton}"
+    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json KyleMassacre/adonis5-package",
+    "test": "node -r @adonisjs/require-ts/build/register bin/test.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{owner}/{skeleton}.git"
+    "url": "git+https://github.com/KyleMassacre/adonis5-menus.git"
   },
-  "homepage": "https://github.com/{owner}/{skeleton}#readme",
+  "homepage": "https://github.com/KyleMassacre/adonis5-menus.git#readme",
   "keywords": [
     "adonisjs",
     "adonis"
   ],
-  "author": "Author name",
+  "author": "Kyle Ellis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/{owner}/{skeleton}/issues"
+    "url": "https://github.com/KyleMassacre/adonis5-menus.git/issues"
   },
   "devDependencies": {
     "@adonisjs/core": "^5.8.4",
@@ -59,9 +60,15 @@
   "mrmConfig": {
     "core": false,
     "license": "MIT",
-    "services": [],
+    "services": [
+      "github-actions"
+    ],
     "minNodeVersion": "16.13.1",
-    "probotApps": []
+    "probotApps": [
+      "stale",
+      "lock"
+    ],
+    "runGhActionsOnWindows": false
   },
   "types": "build/adonis-typings/index.d.ts",
   "files": [
@@ -123,18 +130,18 @@
     "types": "skeleton",
     "templates": {
       "basePath": "./build/templates",
-			"config": [
-				{
-					"src": "config/skeleton.txt",
-					"dest": "skeleton"
-				}
-			],
-			"contracts": [
-				{
-					"src": "contracts/skeleton.txt",
-					"dest": "skeleton"
-				}
-			]
+      "config": [
+        {
+          "src": "config/skeleton.txt",
+          "dest": "skeleton"
+        }
+      ],
+      "contracts": [
+        {
+          "src": "contracts/skeleton.txt",
+          "dest": "skeleton"
+        }
+      ]
     }
   }
 }
