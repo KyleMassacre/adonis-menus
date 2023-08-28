@@ -2,7 +2,7 @@
   "name": "adonis5-menus",
   "version": "1.0.0",
   "description": "A menu manager for AdonisJs",
-  "main": "build/providers/SkeletonProvider.js",
+  "main": "build/providers/MenuProvider.js",
   "scripts": {
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "pretest": "npm run lint",
